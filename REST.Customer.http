@@ -1,0 +1,87 @@
+### POST first customer
+POST http://localhost:3000/api/customers
+Content-Type: application/json
+
+{
+    "customerNumber": 103,
+    "customerName": "Atelier graphique",
+    "contactFirstName": "Schmitt",
+    "contactLastName": "Carine",
+    "phone": "787890748",
+    "addressLine1": "54, rue Royale",
+    "addressLine2": null,
+    "city": "Nantes",
+    "state": null,
+    "postalCode": "44000",
+    "country": "France",
+    "salesRepEmployeeNumber": 1001,
+    "creditLimit": 21000
+}
+
+### POST second customer
+POST http://localhost:3000/api/customers
+content-type: application/json
+
+{
+    "customerNumber": 112,
+    "customerName": "Signal Gift Stores",
+    "contactFirstName": "King",
+    "contactLastName": "Jean",
+    "phone": "7025551838",
+    "addressLine1": "8489 Strong St.",
+    "addressLine2": null,
+    "city": "Las Vegas",
+    "state": null,
+    "postalCode": "83030",
+    "country": "USA",
+    "salesRepEmployeeNumber": 1001,
+    "creditLimit": 71800
+}
+
+### POST third customer
+POST http://localhost:3000/api/customers
+content-type: application/json
+
+{
+    "customerNumber": 114,
+    "customerName": "Australian Collectors, Co.",
+    "contactFirstName": "Ferguson",
+    "contactLastName": "Peter",
+    "phone": "03 9520 4555",
+    "addressLine1": "636 St Kilda Road",
+    "addressLine2": "Level 3 in the basement",
+    "city": "Melbourne",
+    "state": "Victoria",
+    "postalCode": "30044",
+    "country": "Australia",
+    "salesRepEmployeeNumber": 1002,
+    "creditLimit": 117300
+}
+
+### GET all customers
+GET http://localhost:3000/api/customers
+
+### GET customer by id
+GET http://localhost:3000/api/customers/112
+
+### PUT customer by id
+PUT http://localhost:3000/api/customers/112
+Content-Type: application/json
+  
+{
+    "customerName": "Nguyen Van Anh",
+    "contactFirstName": "Nguyen",
+    "contactLastName": "Anh",
+    "phone": "7878576456",
+    "addressLine1": "CT1 apartment Riverside",
+    "addressLine2": "Hoang Mai District, Ha Noi",
+    "city": "Ha Noi",
+    "state": "Washington",
+    "postalCode": "65422",
+    "country": "USA",
+    "salesRepEmployeeNumber": 1001,
+    "creditLimit": 2233
+}
+
+### DELETE customer by id
+DELETE http://localhost:3000/api/customers/112

@@ -1,0 +1,65 @@
+### POST first Employee
+POST http://localhost:3000/api/employees
+Content-Type: application/json
+
+{
+    "employeeNumber": 1001,
+    "lastName": "Murphy",
+    "firstName": "Diane",
+    "extension": "x5800",
+    "email": "dmurphy@classicmodelcars.com",
+    "officeCode": "1",
+    "reportsTo": null,
+    "jobTitle": "Manager"
+}
+
+### POST second Employee
+POST http://localhost:3000/api/employees
+Content-Type: application/json
+
+{
+    "employeeNumber": 1002,
+    "lastName": "Patterson",
+    "firstName": "Mary",
+    "extension": "x4611",
+    "email": "mpatterso@classicmodelcars.com",
+    "officeCode": "1",
+    "reportsTo": 1001,
+    "jobTitle": "VP Sales"
+}
+
+### POST third Employee
+POST http://localhost:3000/api/employees
+Content-Type: application/json
+
+{
+    "employeeNumber": 1003,
+    "lastName": "Firrelli",
+    "firstName": "Jeff",
+    "extension": "x9273",
+    "email": "jfirrelli@classicmodelcars.com",
+    "officeCode": "1",
+    "reportsTo": 1001,
+    "jobTitle": "VP Marketing"
+}
+
+### GET all Employees
+GET http://localhost:3000/api/employees
+
+### GET Employee by ID
+GET http://localhost:3000/api/employees/1001
+
+### PUT Employee by ID
+PUT http://localhost:3000/api/employees/1001
+Content-Type: application/json
+
+{
+    "extension": "x3838",
+    "email": "dmurphy@classicmodelcars.com",
+    "officeCode": "99",
+    "reportsTo": null,
+    "jobTitle": "President"
+}
+
+### DELETE Employee by ID
+DELETE http://localhost:3000/api/employees/1003
